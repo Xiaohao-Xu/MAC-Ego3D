@@ -1,6 +1,0 @@
-LICENSE
-pygicp.egg-info/PKG-INFO
-pygicp.egg-info/SOURCES.txt
-pygicp.egg-info/dependency_links.txt
-pygicp.egg-info/not-zip-safe
-pygicp.egg-info/top_level.txt

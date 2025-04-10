@@ -1,0 +1,67 @@
+name: 'replica'
+device: 'cuda:0'
+color_data: '/media/hdd/xiaohao/data/replica/office4/images/frame*.jpg'
+depth_data: '/media/hdd/xiaohao/data/replica/office4/depth_images/depth*.png'
+pose_path: '/media/hdd/xiaohao/data/replica/office4/traj.txt'
+viz_path: './experiments/office4/viz_1/'
+output_point_path: './output/multi/multi_0/part_0/map.pt'
+output_point_path_ply: './output/multi/multi_0/part_0/map.ply'
+output_traj_path: './output/multi/multi_0/part_0/traj.pt'
+output_traj_path_ply: './output/multi/multi_0/part_0/traj.ply'
+jitter: 0.3
+rays_count: 1200 
+map_patch_size: [4, 4]  
+search_radius: 0.15 
+K: 8
+n: 1500
+cam_iters: 100
+loop_refine_iters: 2000
+loop_iters: 1000
+map_iters: 150
+map_init_iters: 5000
+N_rand_init: 3136 
+N_rand: 3000
+constant_speed: False
+warp_loss: False
+mask_scale: 10
+near_sample_count: 16
+uniform_sample_count: 4
+BA: True
+vo: True
+
+mapping_fre: 10
+viz_fre: 10
+keyframe_fre: 50
+scene_ranges: [-10.0, -10.0, -10.0, 10.0, 10.0, 10.0] 
+outliers: []
+net_lr: 0.003
+feature_lr: 0.005
+pose_lr: 0.0015
+lamda_color: 0.2
+lamda_depth: 1.0
+loop_cam_iters: 150
+vox_res: 100
+threshold: 0.88
+threshold_coarse: 0.80
+
+camera:
+  H: 680 
+  W: 1200
+  fx: 600.0
+  fy: 600.0
+  cx: 599.5
+  cy: 339.5
+  png_depth_scale: 6553.5 
+  crop_edge: 0
+F_net:
+  input_channel: 141 #141
+  intermediate_channel: 256
+  output_channel: 128
+density_net:
+  input_channel: 128
+  intermediate_channel: 256
+  output_channel: 1
+radiance_net:
+  input_channel: 128
+  intermediate_channel: 128 #155
+  output_channel: 3

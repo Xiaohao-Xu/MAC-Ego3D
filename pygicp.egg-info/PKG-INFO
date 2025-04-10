@@ -1,7 +1,0 @@
-Metadata-Version: 2.1
-Name: pygicp
-Version: 0.0.1
-Summary: A collection of GICP-based point cloud registration algorithms
-Author: k.koide
-Author-email: k.koide@aist.go.jp
-License-File: LICENSE

@@ -1,0 +1,63 @@
+name: 'replica'
+
+output_pgo_traj: './experiments/office4/'
+output_pgo_map: './experiments/office4/'
+pose_path: '/media/hdd/xiaohao/data/replica/office4/traj.txt'
+
+jitter: 0.3
+rays_count: 1200 
+map_patch_size: [4, 4]  
+samples_count: 8  
+samples_pdf_count: 12 
+search_radius: 0.15 
+K: 8
+n: 1500
+cam_iters: 100
+loop_refine_iters: 2000
+loop_iters: 1000
+map_iters: 150
+map_init_iters: 5000
+N_rand_init: 3136 
+N_rand: 3000
+constant_speed: False
+warp_loss: False
+mask_scale: 10
+near_sample_count: 16
+uniform_sample_count: 4
+BA: True
+vo: True
+
+mapping_fre: 10
+viz_fre: 1
+keyframe_fre: 50
+scene_ranges: [-10.0, -10.0, -10.0, 10.0, 10.0, 10.0] 
+net_lr: 0.003
+feature_lr: 0.005
+pose_lr: 0.0015
+lamda_color: 0.2
+lamda_depth: 1.0
+loop_cam_iters: 150
+vox_res: 100
+
+
+camera:
+  H: 680 
+  W: 1200
+  fx: 600.0
+  fy: 600.0
+  cx: 599.5
+  cy: 339.5
+  png_depth_scale: 6553.5 
+  crop_edge: 0
+F_net:
+  input_channel: 141 
+  intermediate_channel: 256
+  output_channel: 128
+density_net:
+  input_channel: 128
+  intermediate_channel: 256
+  output_channel: 1
+radiance_net:
+  input_channel: 128
+  intermediate_channel: 128 
+  output_channel: 3

@@ -1,3 +1,0 @@
-## camera parameters
-H W fx fy cx cy depth_scale depth_trunc dataset_type
-640 480 585 585 320 240 1000.0 10.0 real
